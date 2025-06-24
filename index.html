@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soai Nguyen | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-barba="wrapper">
+    <nav>
+      <a href="index.html">Giới thiệu</a>
+      <a href="skills.html">Kỹ năng</a>
+      <a href="projects.html">Dự án học tập</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+
+    <main data-barba="container" data-barba-namespace="home">
+      <header>
+        <img src="anh1.jpg" alt="Avatar" class="avatar" />
+        <h1 class="typewriter">Mình là Hoàng Nguyên Soái</h1>
+        <p>Sinh viên CNTT - Yêu thích lập trình và thiết kế giao diện web</p>
+      </header>
+
+      <div class="container">
+        <section>
+          <h2>Giới thiệu</h2>
+          <p>
+            Mình là Hoàng Nguyên Soái, sinh viên năm 2 ngành Công nghệ Thông
+            tin.Với niềm đam mê lớn dành cho công nghệ, đặc biệt là lập trình và
+            thiết kế giao diện web, mình luôn chủ động tìm kiếm kiến thức mới và
+            trau dồi kỹ năng thông qua các dự án cá nhân và học tập nhóm.
+          </p>
+          <ul style="margin-top: 15px; list-style: none; padding-left: 0">
+            <li><strong>🎂 Ngày sinh:</strong> 07/12/2005</li>
+            <li><strong>🏙️ Nơi ở:</strong> TP Hồ Chí Minh</li>
+            <li><strong>🚹 Giới tính:</strong> Nam</li>
+            <li><strong>🎓 Học vấn:</strong> Sinh viên năm 2</li>
+          </ul>
+        </section>
+      </div>
+
+      <footer>&copy; 2025 Nguyen Soai Portfolio. All rights reserved.</footer>
+    </main>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script>
+      barba.init({
+        transitions: [
+          {
+            name: "fade-transition",
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0,
+                duration: 0.5,
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0,
+                duration: 0.5,
+              });
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
