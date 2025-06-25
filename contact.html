@@ -2,7 +2,7 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Liên hệ</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -13,6 +13,84 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff9f4;
+        color: #333;
+      }
+      nav {
+        background: #a67c52;
+        padding: 15px 30px;
+        display: flex;
+        gap: 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #f1c40f;
+      }
+      main.section {
+        max-width: 600px;
+        margin: 60px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgb(166 124 82 / 0.2);
+      }
+      main h2 {
+        font-weight: 800;
+        color: #a67c52;
+        margin-bottom: 15px;
+      }
+      main p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.1rem;
+      }
+      .contact-item i {
+        color: #a67c52;
+        font-size: 1.8rem;
+        transition: color 0.3s ease;
+      }
+      .contact-item a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .contact-item a:hover,
+      .contact-item i:hover {
+        color: #f1c40f;
+      }
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background: #a67c52;
+        color: white;
+        font-weight: 600;
+        margin-top: 60px;
+      }
+    </style>
   </head>
   <body data-barba="wrapper">
     <nav>
@@ -22,25 +100,36 @@
       <a href="contact.html">Liên hệ</a>
     </nav>
 
-    <main data-barba="container" data-barba-namespace="contact">
-      <section class="section">
-        <h2>Liên hệ</h2>
-        <p>
-          Nếu bạn muốn trò chuyện về việc học, công nghệ, hoặc hợp tác trong một
-          dự án, hãy liên hệ với tôi qua các nền tảng bên dưới!
-        </p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/hoang.soai.760695" target="_blank"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a href="https://github.com/hsoai" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="mailto:soaihn5619@ut.edu.vn"
-            ><i class="fas fa-envelope"></i
-          ></a>
-        </div>
-      </section>
+    <main class="section" data-barba="container" data-barba-namespace="contact">
+      <h2>Liên hệ</h2>
+      <p>
+        Nếu bạn muốn trò chuyện về việc học, công nghệ, hoặc hợp tác trong một
+        dự án, hãy liên hệ với tôi qua các kênh dưới đây!
+      </p>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:soaihn5619@ut.edu.vn" title="Gửi email"
+            >soaihn5619@ut.edu.vn</a
+          >
+        </li>
+        <li class="contact-item">
+          <i class="fab fa-facebook"></i>
+          <a
+            href="https://www.facebook.com/hoang.soai.760695"
+            target="_blank"
+            title="Facebook"
+          >
+            facebook.com/hoang.soai.760695
+          </a>
+        </li>
+        <li class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/hsoai" target="_blank" title="GitHub">
+            github.com/hsoai
+          </a>
+        </li>
+      </ul>
     </main>
 
     <footer>&copy; 2025 Nguyen Soai Portfolio. All rights reserved.</footer>
